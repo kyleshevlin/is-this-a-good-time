@@ -1,0 +1,32 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 125%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  line-height: 1.5;
+  text-align: center;
+  padding: 30px;
+
+  &.is-good-time {
+    background: #359c50;
+    color: #fff;
+  }
+
+  &.is-bad-time {
+    background: #f13330;
+    color: #fff;
+  }
+}
+
+.fine_print {
+  font-size: .75em;
+}
