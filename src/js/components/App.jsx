@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-const { store } = require('../Store')
+import store from '../store'
 const BodyColor = require('./BodyColor')
 const TimeDisplay = require('./TimeDisplay')
 

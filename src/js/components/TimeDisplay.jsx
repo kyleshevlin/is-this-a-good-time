@@ -1,7 +1,8 @@
-const React = require('react')
+import React from 'react'
+import { connect } from 'react-redux'
+import { timeIsGood, timeIsBad } from '../actions'
 const SetIntervalMixin = require('../SetIntervalMixin')
 const { formatTime, isGoodTime } = require('../TimeEvaluation')
-const { connector } = require('../Store')
 
 const checkTime = (props) => {
   const { timeIsGood, timeIsBad } = props
@@ -54,4 +55,15 @@ const Time = React.createClass({
   }
 })
 
-module.exports = connector(Time)
+const mapStateToProps = (state) => {
+  return {
+    goodTime: state.goodTime
+  }
+}
+
+const mapDispatchToProps = {
+  timeIsGood,
+  timeIsBad
+}
+
+module.exports = connect(mapStateToProps, mapDispatchToProps)(Time)

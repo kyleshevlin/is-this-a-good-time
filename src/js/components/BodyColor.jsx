@@ -1,5 +1,5 @@
-const React = require('react')
-const { connector } = require('../Store')
+import React from 'react'
+import { connect } from 'react-redux'
 
 const addGoodBodyClass = () => {
   document.body.classList.add('is-good-time')
@@ -51,4 +51,10 @@ const BodyColor = React.createClass({
   }
 })
 
-module.exports = connector(BodyColor)
+const mapStateToProps = (state) => {
+  return {
+    goodTime: state.goodTime
+  }
+}
+
+module.exports = connect(mapStateToProps)(BodyColor)
