@@ -1,7 +1,7 @@
 const React = require('react')
-const SetIntervalMixin = require('./SetIntervalMixin')
-const { formatTime, isGoodTime } = require('./TimeEvaluation')
-const { connector } = require('./Store')
+const SetIntervalMixin = require('../SetIntervalMixin')
+const { formatTime, isGoodTime } = require('../TimeEvaluation')
+const { connector } = require('../Store')
 
 const checkTime = (props) => {
   const { timeIsGood, timeIsBad } = props

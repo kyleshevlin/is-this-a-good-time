@@ -1,5 +1,5 @@
 const React = require('react')
-const { connector } = require('./Store')
+const { connector } = require('../Store')
 
 const addGoodBodyClass = () => {
   document.body.classList.add('is-good-time')
