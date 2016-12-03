@@ -57,4 +57,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-module.exports = connect(mapStateToProps)(BodyColor)
+export default connect(mapStateToProps)(BodyColor)

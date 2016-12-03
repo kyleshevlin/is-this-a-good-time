@@ -1,8 +1,8 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import store from '../store'
-const BodyColor = require('./BodyColor')
-const TimeDisplay = require('./TimeDisplay')
+import BodyColor from './BodyColor'
+import TimeDisplay from './TimeDisplay'
 
 import '../../scss/app.scss'
 

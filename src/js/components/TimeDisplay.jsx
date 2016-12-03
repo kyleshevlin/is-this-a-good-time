@@ -66,4 +66,4 @@ const mapDispatchToProps = {
   timeIsBad
 }
 
-module.exports = connect(mapStateToProps, mapDispatchToProps)(Time)
+export default connect(mapStateToProps, mapDispatchToProps)(Time)
