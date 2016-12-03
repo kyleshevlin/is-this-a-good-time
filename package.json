@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server"
   },
   "author": "Kyle Shevlin",
   "license": "MIT",
@@ -40,6 +41,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "json-loader": "^0.5.4",
     "load-grunt-tasks": "^3.5.2",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
   }
 }
