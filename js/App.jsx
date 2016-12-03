@@ -1,9 +1,11 @@
-const React = require('react')
-const ReactDOM = require('react-dom')
-const { Provider } = require('react-redux')
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
 const { store } = require('./Store')
 const BodyColor = require('./BodyColor')
 const TimeDisplay = require('./TimeDisplay')
+
+import '../scss/app.scss'
 
 const App = React.createClass({
   render () {
