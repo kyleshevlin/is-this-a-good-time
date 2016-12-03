@@ -40,11 +40,18 @@ function golfPlayingTime (moment = getNow()) {
   return (day === 0) && (hour > 9 && hour < 14)
 }
 
+function sleep (moment = getNow()) {
+  const hour = moment.hour()
+
+  return ((hour >= 0 && hour <= 8) || hour === 23)
+}
+
 function isGoodTime (moment = getNow()) {
   return !(
     (workDay(moment) && workHour(moment)) ||
     ultimateTime(moment) ||
     golfPracticeTime(moment) ||
-    golfPlayingTime(moment)
+    golfPlayingTime(moment) ||
+    sleep(moment)
   )
 }
