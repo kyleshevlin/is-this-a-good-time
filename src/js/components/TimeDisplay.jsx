@@ -1,11 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { timeIsGood, timeIsBad } from '../actions'
-const SetIntervalMixin = require('../SetIntervalMixin')
-const { formatTime, isGoodTime } = require('../TimeEvaluation')
+import { formatTime, isGoodTime } from '../helpers/timeEvaluation'
 
-const checkTime = (props) => {
-  const { timeIsGood, timeIsBad } = props
+const checkTime = ({ timeIsGood, timeIsBad }) => {
   isGoodTime() ? timeIsGood() : timeIsBad()
 }
 
@@ -15,8 +13,6 @@ const Time = React.createClass({
     timeIsGood: React.PropTypes.func,
     timeIsBad: React.PropTypes.func
   },
-
-  mixins: [SetIntervalMixin],
 
   getInitialState () {
     return {
@@ -29,7 +25,11 @@ const Time = React.createClass({
   },
 
   componentDidMount () {
-    this.setInterval(this.tick, 15000)
+    setInterval(this.tick, 15000)
+  },
+
+  componentWillUnmount () {
+    clearInterval(this.tick)
   },
 
   tick () {
